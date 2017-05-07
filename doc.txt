@@ -1,0 +1,63 @@
+-----_GIT_------------------------------------------------------------------------------------------------------
+ 
+ IR PARA O PATH REPOSITORIO CONFIGURADO NO SEU GIT
+ --cd-to-home
+ .gitignore
+ 
+ * INICIAR REPOSITORIO SERVER COMPARTILHADO
+   git init --bare
+ 
+ * CLONAR E FAZER A LIGAÇÃO DA SUA BRANCH LOCAL PARA O SERVIDOR DE DISTRIBUIÇÃO
+	git clone git@github.com:tjca1/teste.git
+ 
+ * SABER ONDE OU QUAL REPOSITORIO SUA BRANCH ESTA RELACIONADA
+	git remote
+ * ENVIAR OS ARQUIVOS COMMITADOS LOCAIS PARA O DESTINO FINAL, O REPOSITORIO CLONADO(origin= ao destino onde fica os fontes no servidor / master minha branch local)
+	git push origin master
+ 
+ * FEZ O CLONE DO PROJETO, OUTRA PESSOA FEZ ALTERAÇÕES... PARA PEGAR AS ALTERAÇÕES... COMANDO É:
+	git pull origin master
+ 
+ * COMANDO PARA CARREGAR O BRANCH DO SERVIDOR EM UM BRANCH SEPARADO PARA EVITAR MERGE
+	git fetch origin master
+ 
+ * ADICIONANDO NA STAGED AREA
+	git commit add arquivo.txt 
+
+ * COMMITANDO PARA O REPOSITORIO
+	git commit -m "cometario"
+	
+ * COMMIT DIRETO NO GIT
+	git commit -a -m "comiyando direto"
+	
+ 
+ * VISUALIZAR ARQUIVOS MODIFICADOS OU ADICIONADO NA SUA STAGED AREA(LINHA DE COMANDO)
+	git diff 
+ 
+ * VISUALIZAR ARQUIVOS MODIFICADOS OU ADICIONADO NA SUA STAGED AREA(INTERFACE GRAFICA)	
+	gitk
+	
+ * TODOS OS COMMITS LISTADOS
+	git log --pretty=oneline
+	
+ **********COLOCANDO SEUS PROJETOS NA NUVEM********************
+ * CRIANDO A CHAVE QUE REPRESENTA SUA INSTAÇÃO DE TRABALHO PODER(CADA CHAVE REPRESENTA O PC ONDE VC ESTAR, CASO SEJA A 1A VEZ NA MÁQUINA VC PRECISA GERAR E CADASTRAR NO GITHUB)
+	ssh-keygen
+	   (Enter file in which to save the key (/c/Users/Thiago/.ssh/id_rsa) -> PEDE O NOME DO ARQUIVO, SE NÃO GIGITAR ND ELE GERA UMA NOVA CHAVE.
+	   (Enter passphrase (empty for no passphrase):) -> PEDE PARA CADASTRAR UMA SENHA, VAI SER USADA TODA VEZ QUE COMMITAR, SE NÃO DIGITAR O GIT_BASH VAI PASSAR ESSA ETAPA E EXECUTAR OS COMANDOS.  
+ * VISUALIZAR E COPIAR SUA CHAVE PARA O GIT_HUB
+	cat ~/.ssh/id_rsa.pub
+	
+ 
+ 
+ **********BRANCH S ******************************************** 
+  * CRIANDO UMA BRANCH
+	git branch initial_version    (versão inicial)
+	git developer                 (versão para homolocação)
+	git master                    (versão para produção)
+  
+  * ACESSANDO A BRANCH
+	git checkout nome_da_branch
+	
+
+	
